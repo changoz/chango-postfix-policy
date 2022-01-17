@@ -20,7 +20,7 @@ It reads *sasl_username* attribute and checks against Active Directory if the us
 adgroup = 'group_without_realm'
 ```
 
-4) Check the script output before applying postfix configuration. Execute at shell `echo sasl_username=user_to_test | /opt/chango-postfix-policy/chango-postfix-policy.py`
+4) Check the script output before applying postfix configuration. Execute at shell `echo sasl_username=user_to_test | /opt/chango-postfix-policy/chango-policy.py`
 It should reply with `action=dunno` or `action=rejected`. Depends on user and AD group user.
 
 5) Folder permissions: `chown nobody /opt/chango-postfix-policy`
@@ -33,7 +33,7 @@ It should reply with `action=dunno` or `action=rejected`. Depends on user and AD
 
 ```
 127.0.0.1:9998  inet  n       n       n       -       0       spawn
-     user=nobody argv=/opt/postfix-python-policy-service/policy.py
+     user=nobody argv=/opt/chango-postfix-policy/chango-policy.py
 ```
 
 ### 2) main.cf

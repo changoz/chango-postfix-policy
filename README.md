@@ -1,7 +1,7 @@
 # chango-postfix-policy
-**Postfix custom policy to check if the authenticated user belongs to an Active Directory group before allowing to send email.**
+**Postfix custom policy to check authenticated user membership within an Active Directory group before allowing to send email.**
 
-It reads *sasl_username* attribute and checks against Active Directory if the user is member of the AD group
+It reads *sasl_username* attribute and checks against Active Directory if the user is member of the configured AD group
 
 
 ## Prerequisites 
